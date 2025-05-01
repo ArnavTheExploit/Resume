@@ -7,6 +7,7 @@ import Education from './components/Education';
 import Awards from './components/Awards';   
 import Projects from './components/Projects'; 
 import Team from './components/Team'; 
+
 function App() {
   return (
     <BrowserRouter>

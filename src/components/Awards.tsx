@@ -3,12 +3,11 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function Awards() {
-  const [selectedCert, setSelectedCert] = useState<string | null>(null); // New State
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
 
   const linkedinUrl = "https://linkedin.com/in/arnav-paniya-628216308";
   const githubUrl = "https://github.com/ArnavTheExploit";
   const twitterUrl = "https://x.com/arnav_paniya";
- 
 
   const certificates = [
     "/cert1.png",
@@ -25,7 +24,11 @@ export default function Awards() {
     <section
       id="awards"
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white"
-      style={{ backgroundImage: 'url(/awards-bg.jpg)', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0,0,0,0.6)' }}
+      style={{
+        backgroundImage: 'url(/awards-bg.jpg)',
+        backgroundBlendMode: 'overlay',
+        backgroundColor: 'rgba(0,0,0,0.6)'
+      }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -37,53 +40,57 @@ export default function Awards() {
           <span className="text-yellow-400">A</span>rnav <span className="text-yellow-400">P</span>aniya
         </div>
 
-
-     {/* Header */}
-       <div className="absolute top-4 w-full flex justify-center items-center z-20"> {/* Change z-10 → z-20 */}
-       <div className="relative text-lg flex gap-4 flex-wrap justify-center items-center">
-          <a href="mailto:arnavpaniya@gmail.com" className="hover:text-yellow-400">
-             arnavpaniya@gmail.com
-          </a>
+        {/* Header */}
+        <div className="absolute top-4 w-full flex justify-center items-center z-20">
+          <div className="relative text-lg flex gap-4 flex-wrap justify-center items-center">
+            <a href="mailto:arnavpaniya@gmail.com" className="hover:text-yellow-400">
+              arnavpaniya@gmail.com
+            </a>
             |
-           <a href="https://www.instagram.com/arnavpania/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
-           @arnavpania
-          </a>
-       </div>
-       </div>
-     </div>
+            <a href="https://www.instagram.com/arnavpania/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+              @arnavpania
+            </a>
+          </div>
+        </div>
+      </div>
 
-      {/* Awards Title (Vertical but better aligned) */}
-      <div className="absolute left-5 top-1/2 -translate-y-1/2 text-white tracking-widest hidden md:block z-10"
-        style={{ writingMode: 'vertical-rl', letterSpacing: '0.2em' }}>
-        AWARDS AND ACKNOWLEDGEMENT 
+      {/* Awards Title (Vertical, positioned higher) */}
+      <div
+        className="absolute left-5 z-10 hidden md:block"
+        style={{
+          top: '15%',
+          writingMode: 'vertical-rl',
+          letterSpacing: '0.2em'
+        }}
+      >
+        AWARDS AND ACKNOWLEDGEMENT
       </div>
 
       {/* Content */}
-      <motion.div 
-        initial={{ opacity: 0, y: 50 }} 
-        animate={{ opacity: 1, y: 0 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className="relative z-10 max-w-7xl w-full px-6 py-8 flex flex-col items-center"
       >
         {/* Main Grid */}
         <div className="flex flex-col md:flex-row gap-8 items-start w-full">
-          
-          {/* Left - Certificates */}
-         <div className="grid grid-cols-2 gap-4 w-full md:w-1/2">
-            {certificates.map((cert, index) => (
-             <motion.img
-             key={index}
-             src={cert}
-             alt={`Certificate ${index + 1}`}
-             className="w-40 h-28 object-cover rounded-xl shadow-lg cursor-pointer"
-             whileInView={{ opacity: 1, scale: 1 }}
-             initial={{ opacity: 0, scale: 0.8 }}
-             transition={{ duration: 0.5, delay: index * 0.1 }}
-             onClick={() => setSelectedCert(cert)} // Open on click
-             />
-           ))}
-         </div>
 
+          {/* Left - Certificates */}
+          <div className="grid grid-cols-2 gap-4 w-full md:w-1/2">
+            {certificates.map((cert, index) => (
+              <motion.img
+                key={index}
+                src={cert}
+                alt={`Certificate ${index + 1}`}
+                className="w-40 h-28 object-cover rounded-xl shadow-lg cursor-pointer"
+                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                onClick={() => setSelectedCert(cert)}
+              />
+            ))}
+          </div>
 
           {/* Right - Achievements */}
           <div className="space-y-6 w-full md:w-1/2 text-gray-300 text-xs md:text-sm">
@@ -108,31 +115,31 @@ export default function Awards() {
             </div>
           </div>
         </div>
-
-        {/* Footer - Social Icons */}
-        <div className="absolute bottom-4 right-6 flex gap-6 z-10">
-          <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
-            <FaTwitter size={20} />
-          </a>
-          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
-            <FaLinkedin size={20} />
-          </a>
-          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
-            <FaGithub size={20} />
-          </a>
-        </div>
-
-        {/* Footer - Copyright */}
-        <div className="absolute bottom-4 left-6 text-white text-xs z-10">
-          © Arnav Paniya 2025.
-        </div>
       </motion.div>
+
+      {/* Footer - Social Icons (Bottom Right) */}
+      <div className="absolute bottom-6 right-6 flex gap-6 z-10 bg-black bg-opacity-50 px-4 py-2 rounded-full">
+        <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+          <FaTwitter size={20} />
+        </a>
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+          <FaLinkedin size={20} />
+        </a>
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+          <FaGithub size={20} />
+        </a>
+      </div>
+
+      {/* Footer - Copyright (Bottom Left) */}
+      <div className="absolute bottom-6 left-6 text-white text-xs z-10 bg-black bg-opacity-50 px-4 py-2 rounded-full">
+        © Arnav Paniya 2025.
+      </div>
 
       {/* Full Screen Certificate Viewer */}
       {selectedCert && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={() => setSelectedCert(null)} // Close on click anywhere
+          onClick={() => setSelectedCert(null)}
         >
           <motion.img
             src={selectedCert}

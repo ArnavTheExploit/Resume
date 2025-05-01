@@ -1,4 +1,3 @@
-//import React from "react";
 import {
   FaInstagram,
   FaLinkedin,
@@ -22,6 +21,7 @@ const teamMembers = [
       { icon: <FaTwitter />, url: "https://x.com/arnav_paniya" },
       { icon: <FaEnvelope />, url: "mailto:arnavpaniya@gmail.com" },
     ],
+    objectPosition: "center top" // Focus on face area
   },
   {
     name: "Harshit N M",
@@ -31,6 +31,7 @@ const teamMembers = [
     socials: [
       { icon: <FaInstagram />, url: "https://www.instagram.com/harshit_nm31/" },
     ],
+    objectPosition: "center"
   },
   {
     name: "N. Suhas",
@@ -43,6 +44,7 @@ const teamMembers = [
       { icon: <FaGithub />, url: "https://github.com/TheSuhasDev" },
       { icon: <FaEnvelope />, url: "mailto:suhas6654@gmail.com" },
     ],
+    objectPosition: "center"
   },
   {
     name: "Adithya S P",
@@ -53,6 +55,7 @@ const teamMembers = [
       { icon: <FaInstagram />, url: "https://www.instagram.com/adithya._.10/" },
       { icon: <FaEnvelope />, url: "mailto:adithyasp1668@gmail.com" },
     ],
+    objectPosition: "center top" // Focus on face area
   },
 ];
 
@@ -74,17 +77,27 @@ const Team = () => {
         <h2 className="text-3xl md:text-5xl font-extrabold text-center text-gray-800 mb-2">
           Building the Future, One Line at a Time.
         </h2>
-        <p className="text-center italic text-sm md:text-base" style={{ color: gold }}>
-          "A Nest where Ideas Hatch, Code Grows, and Innovation Takes Flight." — Team CodeNest
+        <p
+          className="text-center italic text-sm md:text-base"
+          style={{ color: "navy" }}
+        >
+          "A Nest where Ideas Hatch, Code Grows, and Innovation Takes Flight." - Team CodeNest
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {teamMembers.map(({ name, title, role, image, socials }, idx) => (
+          {teamMembers.map(({ name, title, role, image, socials, objectPosition }, idx) => (
             <div
               key={idx}
               className="group bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-transform transform hover:scale-105 duration-300 relative border border-gray-200 hover:border-[6px] hover:border-[#bfa76a] flex flex-col"
             >
-              <img src={image} alt={name} className="w-full h-64 object-cover" />
+              <div className="w-full h-64 overflow-hidden">
+                <img 
+                  src={image} 
+                  alt={name} 
+                  className="w-full h-full object-cover" 
+                  style={{ objectPosition: objectPosition || "center" }}
+                />
+              </div>
 
               {/* Info section with social icons */}
               <div className="text-center px-6 py-8 flex flex-col justify-between min-h-[280px]">
@@ -102,7 +115,7 @@ const Team = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#bfa76a] hover:text-black transition"
+                      className="text-black hover:text-[#bfa76a] transition"
                     >
                       <div className="p-2 rounded-full hover:bg-gray-200 text-xl">
                         {icon}
