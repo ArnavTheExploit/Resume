@@ -53,6 +53,39 @@ export default tseslint.config({
   },
 })
 ```
+
+# Resume Website – CodeNest 🌐
+
+This is my personal resume and portfolio website built with **React + Tailwind CSS**. It includes:
+
+- ✨ My personal introduction
+- 👥 A beautiful team section (CodeNest)
+- 📱 Responsive design
+- 🧠 Built with React & Tailwind CSS
+
+## 🧩 Pages & Features
+
+- `Home` – Overview
+- `Team` – Meet the team (CEO, CTO, etc.)
+- `Projects` – Showcases Getaway App
+- `Footer` – Social links and copyright
+
+## 🔗 Live Site (optional)
+[View Live](https://your-username.github.io/resume-website/)
+
+## 🚀 Tech Stack
+- React
+- TypeScript
+- Tailwind CSS
+- GitHub Pages (or Vercel/Netlify)
+
+## 📸 Screenshots
+Add a few screenshots here (optional).
+
+---
+
+© 2025 Arnav Paniya – CodeNest
+
 =======
 # Resume
 >>>>>>> 1d9c61f20dbd8b7bf2820068f300dee7c2666dff
