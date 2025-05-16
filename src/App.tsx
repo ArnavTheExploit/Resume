@@ -1,4 +1,3 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import Hero from './components/Hero';
 import About from './components/About';
 import Education from './components/Education';
@@ -6,18 +5,22 @@ import Awards from './components/Awards';
 import Team from './components/Team';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
+import Note from './components/Note';
 
 function App() {
   return (
-    <Router>
-        <Hero />
-        <About />
-        <Awards />
-        <Education />
-        <Projects />
-        <Team />
-        <Footer />
-    </Router>
+    <>
+      <Hero />
+      <About />
+      <Education />
+      <Awards />
+      <Team />
+      <Projects />
+      <Contact />
+      <Note />
+      <Footer />
+    </>
   );
 }
 

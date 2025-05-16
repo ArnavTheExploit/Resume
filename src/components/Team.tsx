@@ -21,7 +21,7 @@ const teamMembers = [
       { icon: <FaTwitter />, url: "https://x.com/arnav_paniya" },
       { icon: <FaEnvelope />, url: "mailto:arnavpaniya@gmail.com" },
     ],
-    objectPosition: "center top" // Focus on face area
+    objectPosition: "center top"
   },
   {
     name: "Harshit N M",
@@ -55,17 +55,17 @@ const teamMembers = [
       { icon: <FaInstagram />, url: "https://www.instagram.com/adithya._.10/" },
       { icon: <FaEnvelope />, url: "mailto:adithyasp1668@gmail.com" },
     ],
-    objectPosition: "center top" // Focus on face area
+    objectPosition: "center top"
   },
 ];
 
 const Team = () => {
   return (
     <div
+      id="team"
       className="min-h-screen bg-center bg-no-repeat bg-cover relative flex flex-col justify-between"
       style={{ backgroundImage: "url('/Teams.png')" }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-white bg-opacity-60 z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-12">
@@ -99,7 +99,6 @@ const Team = () => {
                 />
               </div>
 
-              {/* Info section with social icons */}
               <div className="text-center px-6 py-8 flex flex-col justify-between min-h-[280px]">
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">{name}</h3>
@@ -107,7 +106,6 @@ const Team = () => {
                   <p className="text-sm text-gray-600 mt-1">{role}</p>
                 </div>
 
-                {/* Social Icons */}
                 <div className="mt-5 flex justify-center gap-3">
                   {socials.map(({ icon, url }, i) => (
                     <a

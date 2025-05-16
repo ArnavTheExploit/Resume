@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 export default function Hero() {
   return (
     <div
+      id="hero"
       className="relative w-full h-screen bg-cover bg-center"
       style={{
         backgroundImage: "url('/profile.jpg')",

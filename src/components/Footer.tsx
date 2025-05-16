@@ -8,6 +8,7 @@ const navItems = [
   { name: 'Team', href: '#team' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Note', href: '#note' },
 ];
 
 const socialLinks = [
@@ -36,13 +37,13 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        {/* Vertical Navigation Links */}
-        <nav className="flex flex-col items-center space-y-2">
+        {/* Horizontal Navigation Links */}
+        <nav className="flex space-x-8 mb-6">
           {navItems.map((item, idx) => (
             <a
               key={idx}
               href={item.href}
-              className="w-full text-center px-4 py-2 rounded hover:bg-gray-700 transition-colors"
+              className="px-3 py-1 rounded hover:bg-gray-700 transition-colors"
             >
               {item.name}
             </a>
@@ -50,11 +51,11 @@ const Footer: React.FC = () => {
         </nav>
 
         {/* Divider */}
-        <div className="border-t border-gray-700 w-full mt-6" />
+        <div className="border-t border-gray-700 w-full" />
 
         {/* Copyright */}
         <div className="mt-4 text-center text-sm">
-          <p>© {new Date().getFullYear()} Arnav Paniya. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Arnav Paniya.</p>
         </div>
       </div>
     </footer>

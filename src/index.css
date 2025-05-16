@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import "@fontsource/pacifico";
+@font-face {
+  font-family: 'Homemade Apple';
+  src: url('/src/assets/fonts/HomemadeApple-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
