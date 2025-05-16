@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const ProjectsPage: React.FC = () => {
   const projects = [
     {
-      imageSrc: "/public/getaway-logo.png",
+      imageSrc: "/getaway-logo.png",
       altText: "GetAway Logo",
       title: "GetAway",
       description:
@@ -76,7 +76,7 @@ const ProjectsPage: React.FC = () => {
       repoLink: "https://github.com/ArnavTheExploit/GetAway",
     },
     {
-      imageSrc: "/public/mbp.png",
+      imageSrc: "/mbp.png",
       altText: "MyBudgetPal Logo",
       title: "MyBudgetPal",
       description:
@@ -86,7 +86,7 @@ const ProjectsPage: React.FC = () => {
       repoLink: "https://github.com/ArnavTheExploit/MyBudgetPal",
     },
     {
-      imageSrc: "/public/AP.png",
+      imageSrc: "/AP.png",
       altText: "Resume Website",
       title: "Resume Website",
       description:
@@ -171,7 +171,7 @@ const ProjectsPage: React.FC = () => {
 
         <div className="flex gap-6 text-xl">
           <a
-            href="https://linkedin.com/in/arnavpaniya"
+            href="https://www.linkedin.com/in/arnav-paniya-628216308/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-400"
@@ -189,7 +189,7 @@ const ProjectsPage: React.FC = () => {
             <FaGithub />
           </a>
           <a
-            href="https://twitter.com/arnavpaniya"
+            href="https://x.com/arnav_paniya"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-400"
