@@ -102,7 +102,7 @@ const ProjectsPage: React.FC = () => {
       id="projects" // <- ID added here
       className="relative min-h-screen bg-black text-white"
       style={{
-        backgroundImage: "url('/public/bg.jpg')",
+        backgroundImage: "url('/bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
