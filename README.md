@@ -1,4 +1,4 @@
-# Resume Website – CodeNest 🌐
+# Resume Website  🌐
 
 Welcome to my **personal resume and portfolio website**, designed with **React** and **Tailwind CSS**! This site showcases my skills, experience, and projects in an interactive, responsive design.
 
@@ -22,11 +22,11 @@ Welcome to my **personal resume and portfolio website**, designed with **React**
 
 ---
 
-## 🔗 Live Site (optional)
+## 🔗 Live Site
 
 You can view my live website here:
 
-[View Live](https://your-username.github.io/resume-website/)
+[https://arnavpania.vercel.app/](https://arnavpania.vercel.app/)
 
 ---
 
@@ -35,19 +35,10 @@ You can view my live website here:
 - **React** – For building the user interface.
 - **TypeScript** – For type safety and improved code quality.
 - **Tailwind CSS** – For styling and responsive layouts.
-- **GitHub Pages** (or Vercel/Netlify) – For deploying the site.
-
----
-
-## 📸 Screenshots
-
-Here are a few screenshots of the website:
-
-- **Homepage**
-- **Team Section**
-- **Project Showcases**
+- **Vercel** – For deploying the site.
 
 ---
 
 © 2025 **Arnav Paniya** – CodeNest | All Rights Reserved
+
 
